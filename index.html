@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/index.css">
+    <title>Login - Signin</title>
+</head>
+<body>
+    <div class="warn-container" id="warn-container">
+        <div class="warn-container-wrapper" id="warn-container-wrapper">
+
+            <span class="warn-msg">
+                <p>This website is created for my Learning Purpose. So don't Fill out your Real Data. Please fill some valid <span style="color: rgb(230, 60, 60); display:inline">Random Data!</span></p>
+            </span>
+
+            <span class="lock">
+                <span class="lock-box"></span>
+                <span class="handle" id="handle"></span>
+                <button onclick="removeWarnScreen()">Proceed</button>
+            </span>
+
+         </div>
+
+    </div>
+    <div class="container" id="container">
+
+        <div class="container-wrapper">
+
+            <section class="signin" id="signinCard">
+                <h1>Sign In</h1>
+                <form id="signinForm">
+                    <label for="email">Enter E-mail</label>
+                    <input type="email" name="email" required value=" " autocomplete="email">
+                    <label for="password">Enter password</label>
+                    <input type="password" name="password" required value="" autocomplete="new-password">
+                    <button type="submit">Sign In</button>
+                    <p>Don't you have a account? Let's create one <a href="#" id="signupBtn">Sign Up</a></p>
+                </form>
+            </section>
+                
+            <section class="signup" id="signupCard">
+                <h1>Sign Up</h1>
+                    <form action="./Pages/thank.html" id="signupForm">
+                        <label for="firstname">First Name</label>
+                        <input type="text" required name="firstname">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" required name="lastname">
+                        <label for="email">Enter E-mail</label>
+                        <input type="email" required name="email">
+                        <label for="crtpassword">Create Password</label>
+                        <input type="password" required name="crtpassword" autocomplete="new-password">
+                        <label for="reenterpwd">Re-enter Password</label>
+                        <input type="password" required name="reenterpwd" autocomplete="new-password">
+                        <button type="submit">Sign Up</button>
+                        <p>Already have an account! <a href="#" id="signinBtn">Sign In</a></p>
+                    </form>
+            </section>
+        </div>
+    </div>
+
+    <script src="./JS/utils.js"></script>
+</body>
+</html>

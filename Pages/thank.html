@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../Style/thank.css">
+    <title id="userName">Hi</title>
+</head>
+<body>
+    <div class="container">
+        <span class="notificationIcon" id="notificationIcon">
+            <i class="fa-solid fa-bell" style="color: black;"></i>
+            <span class="redDot"></span>
+        </span>
+        <aside class="sidePanel" id="sidePanel">
+            <p id="closeBtn1">&times;</p>
+            <div class="msgBox">
+                <span class="contentBox">
+                    <h4 id="title">Message: </h4>
+                    <p id="content">Please Complete Your Kyc</p>
+                </span>
+                <button id="updateKYC">Update KYC</button>
+            </div>
+        </aside>
+        <div class="kyc-container" id="kyc-container">
+            <div class="signup">
+                <p id="closeBtn2">&times;</p>
+                <h1>Update KYC</h1>
+                <form>
+                    <label for="userDOB">Date of Birth</label>
+                    <input type="date" id="userDOB" name="userDOB">
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <input type="radio" name="gender" value="male" checked>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" value="others">
+                        <label for="others">Others</label>
+                    </fieldset>
+                    <select id="country">
+                        <option value="#" disabled selected>Select Country</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="dubai">Dubai</option>
+                        <option value="China">china</option>
+                    </select>
+                    <!-- <input type="text" id="noBox" readonly> -->
+                    <input type="tel" placeholder="Enter Mobile Number">
+                    <button type="submit">Update</button>
+                </form>
+            </div>      
+        </div>
+    </div>
+
+    <script src="../JS/thankUtils.js"></script>
+</body>
+</html>

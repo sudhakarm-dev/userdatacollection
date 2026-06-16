@@ -1,0 +1,237 @@
+:root{
+    --primary-background-color: rgb(255,255,255);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span{
+    display: block;
+}
+.warn-container{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(329deg, #612de1, #2db0e1, #a02de1, #6700a1);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 24s ease infinite;
+    -moz-animation: AnimationName 24s ease infinite;
+    animation: AnimationName 24s ease infinite;
+    display: grid;
+    place-items: center;
+}
+/* container background color animation */
+@-webkit-keyframes AnimationName {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:66% 0%}
+    50%{background-position:35% 100%}
+    100%{background-position:66% 0%}
+}
+.warn-container .warn-container-wrapper{
+    height: 350px;
+    width: 550px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transition: all 2s ease-in;
+}
+.warn-container-wrapper.animate{
+    opacity: 0;
+}
+.warn-container .warn-container-wrapper .warn-msg{
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    font-size: 22px;
+}
+.warn-container .warn-container-wrapper .warn-msg p{
+    text-align: center;
+    padding: 20px;
+}
+.warn-container .warn-container-wrapper .lock{
+    flex-grow: 3;
+    flex-shrink: 0;
+    flex-basis: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.warn-container .warn-container-wrapper .lock .lock-box{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background-color: #2db0e1;
+    z-index: 10;
+}
+.warn-container .warn-container-wrapper .lock .handle{
+    height: 80px;
+    width: 65px;
+    border:  20px solid black;
+    border-radius: 50% 50% 0px 0px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.warn-container .warn-container-wrapper .lock button{
+    height: 20px;
+    width: 60px;
+    border: none;
+    position: absolute;
+    bottom: 70px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    z-index: 10;
+    transform: rotate(90deg);
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: linear-gradient(329deg, #612de1, #2db0e1, #a02de1, #6700a1);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 24s ease infinite;
+    -moz-animation: AnimationName 24s ease infinite;
+    animation: AnimationName 24s ease infinite;
+    display: grid;
+    place-items: center;
+}
+.container .container-wrapper{  
+    height: 700px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--primary-background-color);
+    border-radius: 10px;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.container .container-wrapper .signin{
+    position: absolute;
+    left: 0%;
+    flex: 0 0 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: left 600ms ease-in;
+}
+.container .container-wrapper .signin h1{
+    flex: 0.7 0 0;
+    text-align: center;
+    padding-top: 40px;
+}
+.container .container-wrapper .signin form{
+    flex: 4 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.container .container-wrapper .signin form label{
+    text-align: left;
+    width: 50%;
+    margin-bottom: 8px;
+    color: gray;
+}
+.container .container-wrapper .signin form input{
+    height: 40px;
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    text-indent: 15px;
+    margin-bottom: 2em;
+}
+.container .container-wrapper .signin form button{
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2db0e1;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.container .container-wrapper .signin form p{
+    font-style: italic;
+}
+.container .container-wrapper .signin form p a{
+    text-decoration: none;
+    color: #2db0e1;
+}
+
+.container .container-wrapper .signup{
+    position: absolute;
+    left: 100%;
+    flex: 0 0 0px;
+    width: 100%;
+    transition: left 600ms ease-in-out;
+}
+.container .container-wrapper .signup h1{
+    flex: 0.7 0 0;
+    text-align: center;
+    padding: 35px 0px;
+}
+.container .container-wrapper .signup form{
+    flex: 4 0 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.container .container-wrapper .signup form label{
+    text-align: left;
+    width: 50%;
+    margin-bottom: 8px;
+    color: gray;
+}
+.container .container-wrapper .signup form input{
+    height: 40px;
+    width: 280px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    text-indent: 15px;
+    margin-bottom: 1.5em;
+}
+.container .container-wrapper .signup form button{
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2db0e1;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.container .container-wrapper .signup form p{
+    font-style: italic;
+}
+.container .container-wrapper .signup form p a{
+    text-decoration: none;
+    color: #2db0e1;
+}
