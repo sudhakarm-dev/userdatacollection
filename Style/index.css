@@ -20,7 +20,7 @@ span{
     display: grid;
     place-items: center;
 }
-/* container background color animation */
+/* container and warn container background color animation */
 @-webkit-keyframes AnimationName {
     0%{background-position:66% 0%}
     50%{background-position:35% 100%}
@@ -109,8 +109,8 @@ span{
     -webkit-animation: AnimationName 24s ease infinite;
     -moz-animation: AnimationName 24s ease infinite;
     animation: AnimationName 24s ease infinite;
-    display: grid;
     place-items: center;
+    display: none;
 }
 .container .container-wrapper{  
     height: 700px;
@@ -176,6 +176,8 @@ span{
 }
 .container .container-wrapper .signin form p{
     font-style: italic;
+    width: 50%;
+    text-align: center;
 }
 .container .container-wrapper .signin form p a{
     text-decoration: none;
@@ -185,7 +187,6 @@ span{
 .container .container-wrapper .signup{
     position: absolute;
     left: 100%;
-    flex: 0 0 0px;
     width: 100%;
     transition: left 600ms ease-in-out;
 }
@@ -234,4 +235,80 @@ span{
 .container .container-wrapper .signup form p a{
     text-decoration: none;
     color: #2db0e1;
+}
+
+@media only screen and (max-width:610px){
+    .warn-container .warn-container-wrapper {
+        width: 325px;
+        height: 425px;
+    }
+    .warn-container .warn-container-wrapper .warn-msg p{
+        font-size: 16px;
+    }
+    .warn-container .warn-container-wrapper .lock .handle{
+        height: 130px;
+        width: 90px;
+        top: 20px;
+    }
+    .warn-container .warn-container-wrapper .lock button{
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+        bottom: 120px;
+    }
+    .container .container-wrapper{
+        min-height: 500px;
+        height: auto;
+        width: 330px;
+    }
+    .container .container-wrapper .signin h1{
+        flex: 0.3 0 0;
+        padding: 20px 0px 10px 0px;
+    }
+    .container .container-wrapper .signin form{
+        flex: 2.7 0 0;
+    }
+    .container .container-wrapper .signin form label{
+        margin-bottom: 4px;
+        width: 70%;
+    }
+    .container .container-wrapper .signin form input{
+        margin-bottom: 1em;
+        height: 30px;
+        width: 240px;
+    }
+    .container .container-wrapper .signin form button{
+        margin: 20px 0px;
+        height: 35px;
+        width: 80px;
+    }
+    .container .container-wrapper .signin form p{
+        text-align: center;
+        width: 75%;
+    }
+    .container .container-wrapper .signup h1{
+        height: 0.3 0 0;
+        padding: 17px 0px;
+    }
+    .container .container-wrapper .signup form{
+        flex: 3 0 0;
+    }
+    .container .container-wrapper .signup form label{
+        margin-bottom: 4px;
+        width: 70%;
+    }
+    .container .container-wrapper .signup form input{
+        margin-bottom: 8px;
+        height: 30px;
+        width: 240px;
+    }
+    .container .container-wrapper .signup form button{
+        height: 35px;
+        width: 80px;
+        margin-top: 10px;
+    }
+    .container .container-wrapper .signup form p{
+        text-align: center;
+        margin-bottom: 8px;
+    }
 }

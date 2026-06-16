@@ -197,6 +197,7 @@
 }
 .container .kyc-container .signup form fieldset legend{
     padding: 0px 5px 0px 5px;
+    color: gray;
 }
 .container .kyc-container .signup form input[type="radio"]{
     height: 15px;
@@ -207,4 +208,50 @@
     height: 40px;
     width: 100%;
     margin-bottom: 2em;
+}
+@media only screen and (max-width: 610px){
+    .container .notificationIcon{
+        height: 40px;
+        width: 40px;
+    }
+    .container .notificationIcon i{
+        font-size: 1rem;
+    }
+
+    .container .sidePanel{
+        width: 50%;
+    }
+    .container .sidePanel .msgBox{
+        height: 90px;
+    }
+    .container .sidePanel .msgBox .contentBox{
+        height: 60%;
+    }
+    .container .sidePanel .msgBox .contentBox h4,p{
+        font-size: 12px;
+    }
+    .container .sidePanel .msgBox button{
+        height: 40px;
+        width: 80px;
+    }
+    .container .kyc-container{
+        width: 325px;
+        height: 425px;
+        z-index: 10;
+    }
+    .container .kyc-container .signup h1{
+        padding: 15px 0px;
+    }
+    .container .kyc-container .signup form label{
+        margin-bottom: 4px;
+    }
+    .container .kyc-container .signup form input,fieldset{
+        height: 30px;
+        width: 240px;
+        margin-bottom: 1em;
+    }
+    .container .kyc-container .signup form input[type="radio"]{
+        margin-left: 5px;
+        font-size: 12px;
+    }
 }

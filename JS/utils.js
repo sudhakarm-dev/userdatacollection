@@ -8,7 +8,7 @@ function removeWarnScreen(){
     removeWrapper.classList.add("animate");
     setTimeout(()=>{
         removescreen.style.display = "none";
-        container.style.display = "block";
+        container.style.display = "grid";
     },2000);
 }
 
